@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Control.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 230.0
+margin_top = 40.0
+margin_right = 670.0
+margin_bottom = 115.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+margin_left = 543.994
+margin_top = 302.219
+margin_right = 983.994
+margin_bottom = 377.219
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+margin_left = 44.6097
+margin_top = 202.008
+margin_right = 484.61
+margin_bottom = 277.008
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="text_changed" from="TextEdit" to="." method="_on_TextEdit_text_changed"]
