@@ -20,7 +20,7 @@ class EmployeeTeamIterator:
 	
 	func add_team(employee: CompanyEmployeeTeam) -> void:
 		for member in employee.get_subordinates():
-			team_members.push_front(member)
+			team_members.push_back(member)
 			add_team(member)
 	
 	func current() -> CompanyEmployeeTeam:
@@ -87,7 +87,7 @@ class CompanyEmployeeTeam:
 
 
 func _ready() -> void:
-	
+	print('\n', self.name)
 	var john = CompanyEmployeeTeam.new(Employee.new('john', 'director'))
 	var tom = CompanyEmployeeTeam.new(Employee.new('tom', 'developer'))
 	var johny = CompanyEmployeeTeam.new(Employee.new('johny', 'developer'))
